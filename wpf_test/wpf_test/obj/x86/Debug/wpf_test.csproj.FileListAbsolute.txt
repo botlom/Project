@@ -1,0 +1,12 @@
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\bin\Debug\wpf_test.exe
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\bin\Debug\wpf_test.pdb
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\MainWindow.baml
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\MainWindow.g.cs
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\App.g.cs
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\wpf_test_MarkupCompile.cache
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\wpf_test.g.resources
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\wpf_test.Properties.Resources.resources
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\wpf_test.csproj.GenerateResource.Cache
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\wpf_test.exe
+c:\users\hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\obj\x86\Debug\wpf_test.pdb
+C:\Users\Hare\documents\visual studio 2010\Projects\wpf_test\wpf_test\bin\Debug\wpf_test.exe.config

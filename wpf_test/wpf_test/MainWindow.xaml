@@ -1,0 +1,65 @@
+﻿<Window x:Class="wpf_test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="568" Width="994" Loaded="Window_Loaded">
+    <Grid Width="975" Height="528">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="319*" />
+            <RowDefinition Height="8" />
+            <RowDefinition Height="203" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="505" />
+            <ColumnDefinition Width="475*" />
+        </Grid.ColumnDefinitions>
+        <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="342,255,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
+        <DataGrid AutoGenerateColumns="False" Height="269" HorizontalAlignment="Left" Margin="12,36,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="324" SelectionChanged="dataGrid1_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="80"/>
+                <DataGridTextColumn Binding="{Binding login}" Header="Login" Width="80"/>
+                <DataGridTextColumn Binding="{Binding password}" Header="Password" Width="80"/>
+                <DataGridTextColumn Binding="{Binding idCompany}" Header="Company"/>
+                </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="342,284,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" />
+        <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="423,284,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="342,66,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="342,119,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="342,171,0,0" Name="textBox3" VerticalAlignment="Top" Width="120" />
+        <DataGrid AutoGenerateColumns="False" Height="269" HorizontalAlignment="Left" Margin="11,40,0,0" Name="dataGrid2" VerticalAlignment="Top" Width="225" SelectionChanged="dataGrid2_SelectionChanged" Grid.Column="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" Header="ID"/>
+                <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="100"/>
+                <DataGridTextColumn Binding="{Binding ContractStatus}" Header="Satus" Width="100"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="242,255,0,0" Name="button4" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="button4_Click" />
+        <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="242,284,0,0" Name="button5" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="button5_Click" />
+        <Button Content="Delete" Height="23" HorizontalAlignment="Left" Margin="323,284,0,0" Name="button6" VerticalAlignment="Top" Width="75" Grid.Column="1" Click="button6_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="242,66,0,0" Name="textBox5" VerticalAlignment="Top" Width="120" Grid.Column="1" />
+        <Label Content="Name" Height="29" HorizontalAlignment="Left" Margin="342,41,0,0" Name="label1" VerticalAlignment="Top" Width="91" />
+        <Label Content="Login" Height="25" HorizontalAlignment="Left" Margin="342,93,0,0" Name="label2" VerticalAlignment="Top" Width="91" />
+        <Label Content="Password" Height="25" HorizontalAlignment="Left" Margin="342,148,0,0" Name="label3" VerticalAlignment="Top" Width="91" />
+        <Label Content="Company" Height="30" HorizontalAlignment="Left" Margin="342,200,0,0" Name="label4" VerticalAlignment="Top" Width="91" />
+        <ComboBox Grid.Column="1" Height="23" HorizontalAlignment="Left" Margin="242,119,0,0" Name="comboBox1" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="Еще не заключен" />
+            <ComboBoxItem Content="Заключен" />
+            <ComboBoxItem Content="Расторгнут" />
+        </ComboBox>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="342,226,0,0" Name="comboBox2" VerticalAlignment="Top" Width="120" ItemsSource="{Binding}" SelectedValue="{Binding id, Mode=TwoWay}" SelectedValuePath="id" DisplayMemberPath="name" SelectionChanged="comboBox2_SelectionChanged" SelectedIndex="0" />
+        <Label Content="Name" Height="29" HorizontalAlignment="Left" Margin="242,40,0,0" Name="label5" VerticalAlignment="Top" Width="91" Grid.Column="1" />
+        <Label Content="Status" Height="25" HorizontalAlignment="Left" Margin="242,93,0,0" Name="label6" VerticalAlignment="Top" Width="91" Grid.Column="1" />
+        <DataGrid AutoGenerateColumns="False" Height="159" HorizontalAlignment="Left" Margin="121,19,0,0" Name="dataGrid3" VerticalAlignment="Top" Width="746" Grid.ColumnSpan="2" Grid.Row="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding id}" Header="ID" />
+                <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="180" />
+                <DataGridTextColumn Binding="{Binding login}" Header="Login" Width="180" />
+                <DataGridTextColumn Binding="{Binding password}" Header="Password" Width="180" />
+                <DataGridTextColumn Binding="{Binding idCompany}" Header="Company" Width="180" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Companies" Height="29" HorizontalAlignment="Left" Name="label7" VerticalAlignment="Top" Width="91" Grid.Column="1" Margin="0,5,0,0" />
+        <Label Content="Users" Height="29" HorizontalAlignment="Left" Margin="12,5,0,0" Name="label8" VerticalAlignment="Top" Width="91" />
+    </Grid>
+</Window>
