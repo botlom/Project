@@ -13,7 +13,7 @@
             <ColumnDefinition Width="475*" />
         </Grid.ColumnDefinitions>
         <Button Content="Add" Height="23" HorizontalAlignment="Left" Margin="342,255,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" />
-        <DataGrid AutoGenerateColumns="False" Height="269" HorizontalAlignment="Left" Margin="12,36,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="324" SelectionChanged="dataGrid1_SelectionChanged">
+        <DataGrid AutoGenerateColumns="False" Height="269" HorizontalAlignment="Left" Margin="12,36,0,0" Name="dataGrid1" VerticalAlignment="Top" Width="324" SelectionChanged="dataGrid1_SelectionChanged" IsEnabled="True" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding id}" Header="ID"/>
                 <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="80"/>
@@ -27,7 +27,7 @@
         <TextBox Height="23" HorizontalAlignment="Left" Margin="342,66,0,0" Name="textBox1" VerticalAlignment="Top" Width="120" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="342,119,0,0" Name="textBox2" VerticalAlignment="Top" Width="120" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="342,171,0,0" Name="textBox3" VerticalAlignment="Top" Width="120" />
-        <DataGrid AutoGenerateColumns="False" Height="269" HorizontalAlignment="Left" Margin="11,40,0,0" Name="dataGrid2" VerticalAlignment="Top" Width="225" SelectionChanged="dataGrid2_SelectionChanged" Grid.Column="1">
+        <DataGrid AutoGenerateColumns="False" Height="269" HorizontalAlignment="Left" Margin="11,40,0,0" Name="dataGrid2" VerticalAlignment="Top" Width="225" SelectionChanged="dataGrid2_SelectionChanged" Grid.Column="1" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding id}" Header="ID"/>
                 <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="100"/>
@@ -47,10 +47,10 @@
             <ComboBoxItem Content="Заключен" />
             <ComboBoxItem Content="Расторгнут" />
         </ComboBox>
-        <ComboBox Height="23" HorizontalAlignment="Left" Margin="342,226,0,0" Name="comboBox2" VerticalAlignment="Top" Width="120" ItemsSource="{Binding}" SelectedValue="{Binding id, Mode=TwoWay}" SelectedValuePath="id" DisplayMemberPath="name" SelectionChanged="comboBox2_SelectionChanged" SelectedIndex="0" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="342,226,0,0" Name="comboBox2" VerticalAlignment="Top" Width="120" ItemsSource="{Binding}" SelectedValue="{Binding id, Mode=TwoWay}" SelectedValuePath="id" DisplayMemberPath="name" SelectedIndex="0" MouseEnter="comboBox2_MouseEnter" />
         <Label Content="Name" Height="29" HorizontalAlignment="Left" Margin="242,40,0,0" Name="label5" VerticalAlignment="Top" Width="91" Grid.Column="1" />
         <Label Content="Status" Height="25" HorizontalAlignment="Left" Margin="242,93,0,0" Name="label6" VerticalAlignment="Top" Width="91" Grid.Column="1" />
-        <DataGrid AutoGenerateColumns="False" Height="159" HorizontalAlignment="Left" Margin="121,19,0,0" Name="dataGrid3" VerticalAlignment="Top" Width="746" Grid.ColumnSpan="2" Grid.Row="2">
+        <DataGrid AutoGenerateColumns="False" Height="159" HorizontalAlignment="Left" Margin="121,19,0,0" Name="dataGrid3" VerticalAlignment="Top" Width="746" Grid.ColumnSpan="2" Grid.Row="2" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding id}" Header="ID" />
                 <DataGridTextColumn Binding="{Binding name}" Header="Name" Width="180" />
